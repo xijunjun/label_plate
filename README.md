@@ -6,9 +6,9 @@ Easy to label China plate<br>
     114 207 420 223 417 299 110 276 blue s "川D71603"
     373 374 601 366 599 413 375 422 blue s "京AD6A99"
 ## 运行环境：linux或windows+pyhton2.7     依赖库：cv2,pillow(PIL)
-#### 测试过可行的配置：【ubuntu16.04+opencv3.3.0.10及以上版本】【windows7+opencv3.1】
-    linux下pip安装opencv命令 sudo pip install opencv-python==3.3.0.10
-    (查看候选版本命令sudo pip install opencv-python==)
+#### 测试过可行的配置：【ubuntu16.04+python2.7+pillow+opencv3.3.0.10及以上版本】【windows7+python2.7+pillow+opencv3.1】
+    linux下pip安装opencv，先更新pip， 然后运行sudo pip install opencv-python==3.3.0.10
+    (查看opencv候选版本命令sudo pip install opencv-python==)
 ## 使用步骤：
 ### 一、配置按键
     程序通过cv2.waitKey()获得按键值，但是经测试某些按键值在不同的电脑或主机或opencv版本上不一样，所以需要通过运行
@@ -24,7 +24,7 @@ Easy to label China plate<br>
     3.点完4个点，会弹出一个窗口，用于修正四个点的位置，按space选取不同的点，上下左右键移动点。完成后，按enter进入下一步
     4.需要根据当前标注车牌的信息，通过鼠标点击对话框选择颜色、行数，通过鼠标输入中文，键盘输入英文和数字，backspace可以
       删除输入的字符,完成后，按enter进入下一步
-    5.此时有两种情况：
+    5.此时有三种情况：
       a.图像中的车牌没标注完，回到第2步，继续标注
       b.图像中的车牌标注完，按enter保存标注结果并开始标注下一张图像，当前文件也会被移动到‘标注完成‘文件夹
       c.不想保存当前图像的标注结果，按delete键开始标注下一张图像
